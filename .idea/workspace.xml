@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="db565531-651a-422c-a2ef-f09ac0f1a8cb" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CompilerWorkspaceConfiguration">
+    <option name="MAKE_PROJECT_ON_SAVE" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/src/view/static/css" />
+  </component>
+  <component name="ProjectId" id="1dGhUWI1WHirl7HlFyL16YIy8Ow" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="autoscrollToSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="settings.editor.selected.configurable" value="android.dex.compiler" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/view" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Maven.mybatis-generator">
+    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.App" />
+      <module name="flashsale" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MD5Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.MD5Test" />
+      <module name="flashsale" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MapTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.MapTest" />
+      <module name="flashsale" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ValidatorTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.ValidatorTest" />
+      <module name="flashsale" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="mybatis-generator" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="mybatis-generator:generate" />
+              </list>
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <configuration name="spring-boot:run" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="clean" />
+                <option value="spring-boot:run" />
+              </list>
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Application.App" />
+      <item itemvalue="Application.MD5Test" />
+      <item itemvalue="Application.MapTest" />
+      <item itemvalue="Maven.mybatis-generator" />
+      <item itemvalue="Maven.spring-boot:run" />
+      <item itemvalue="Application.ValidatorTest" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.ValidatorTest" />
+        <item itemvalue="Application.MapTest" />
+        <item itemvalue="Application.MD5Test" />
+        <item itemvalue="Application.App" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="db565531-651a-422c-a2ef-f09ac0f1a8cb" name="Default Changelist" comment="" />
+      <created>1592057352813</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1592057352813</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="320" y="76" key="#Auto_Import" timestamp="1592093817778">
+      <screen x="0" y="23" width="1440" height="801" />
+    </state>
+    <state x="320" y="76" key="#Auto_Import/0.23.1440.801@0.23.1440.801" timestamp="1592093817778" />
+    <state x="184" y="72" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1592124946675">
+      <screen x="0" y="23" width="1440" height="801" />
+    </state>
+    <state x="184" y="72" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.801@0.23.1440.801" timestamp="1592124946675" />
+    <state x="533" y="127" key="#com.intellij.ide.util.MemberChooser" timestamp="1592316583563">
+      <screen x="0" y="23" width="1440" height="801" />
+    </state>
+    <state x="533" y="127" key="#com.intellij.ide.util.MemberChooser/0.23.1440.801/-251.-1057.1920.1057@0.23.1440.801" timestamp="1592269133040" />
+    <state x="533" y="127" key="#com.intellij.ide.util.MemberChooser/0.23.1440.801@0.23.1440.801" timestamp="1592316583563" />
+    <state x="458" y="164" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1592115530596">
+      <screen x="0" y="23" width="1440" height="801" />
+    </state>
+    <state x="458" y="164" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1440.801@0.23.1440.801" timestamp="1592115530596" />
+    <state width="1398" height="181" key="GridCell.Tab.0.bottom" timestamp="1592317184496">
+      <screen x="0" y="23" width="1440" height="801" />
+    </state>
+    <state width="1398" height="71" key="GridCell.Tab.0.bottom/0.23.1440.801/-251.-1057.1920.1057@0.23.1440.801" timestamp="1592271530347" />
+    <state width="1398" height="181" key="GridCell.Tab.0.bottom/0.23.1440.801@0.23.1440.801" timestamp="1592317184496" />
+    <state width="1398" height="181" key="GridCell.Tab.0.center" timestamp="1592317184495">
+      <screen x="0" y="23" width="1440" height="801" />
+    </state>
+    <state width="1398" height="71" key="GridCell.Tab.0.center/0.23.1440.801/-251.-1057.1920.1057@0.23.1440.801" timestamp="1592271530346" />
+    <state width="1398" height="181" key="GridCell.Tab.0.center/0.23.1440.801@0.23.1440.801" timestamp="1592317184495" />
+    <state width="1398" height="181" key="GridCell.Tab.0.left" timestamp="1592317184495">
+      <screen x="0" y="23" width="1440" height="801" />
+    </state>
+    <state width="1398" height="71" key="GridCell.Tab.0.left/0.23.1440.801/-251.-1057.1920.1057@0.23.1440.801" timestamp="1592271530346" />
+    <state width="1398" height="181" key="GridCell.Tab.0.left/0.23.1440.801@0.23.1440.801" timestamp="1592317184495" />
+    <state width="1398" height="181" key="GridCell.Tab.0.right" timestamp="1592317184496">
+      <screen x="0" y="23" width="1440" height="801" />
+    </state>
+    <state width="1398" height="71" key="GridCell.Tab.0.right/0.23.1440.801/-251.-1057.1920.1057@0.23.1440.801" timestamp="1592271530346" />
+    <state width="1398" height="181" key="GridCell.Tab.0.right/0.23.1440.801@0.23.1440.801" timestamp="1592317184496" />
+    <state width="1398" height="404" key="GridCell.Tab.1.bottom" timestamp="1592184463713">
+      <screen x="0" y="23" width="1440" height="801" />
+    </state>
+    <state width="1398" height="404" key="GridCell.Tab.1.bottom/0.23.1440.801/-251.-1057.1920.1057@0.23.1440.801" timestamp="1592184463713" />
+    <state width="1398" height="404" key="GridCell.Tab.1.bottom/0.23.1440.801@0.23.1440.801" timestamp="1592133536615" />
+    <state width="1398" height="404" key="GridCell.Tab.1.center" timestamp="1592184463712">
+      <screen x="0" y="23" width="1440" height="801" />
+    </state>
+    <state width="1398" height="404" key="GridCell.Tab.1.center/0.23.1440.801/-251.-1057.1920.1057@0.23.1440.801" timestamp="1592184463712" />
+    <state width="1398" height="404" key="GridCell.Tab.1.center/0.23.1440.801@0.23.1440.801" timestamp="1592133536614" />
+    <state width="1398" height="404" key="GridCell.Tab.1.left" timestamp="1592184463712">
+      <screen x="0" y="23" width="1440" height="801" />
+    </state>
+    <state width="1398" height="404" key="GridCell.Tab.1.left/0.23.1440.801/-251.-1057.1920.1057@0.23.1440.801" timestamp="1592184463712" />
+    <state width="1398" height="404" key="GridCell.Tab.1.left/0.23.1440.801@0.23.1440.801" timestamp="1592133536614" />
+    <state width="1398" height="404" key="GridCell.Tab.1.right" timestamp="1592184463713">
+      <screen x="0" y="23" width="1440" height="801" />
+    </state>
+    <state width="1398" height="404" key="GridCell.Tab.1.right/0.23.1440.801/-251.-1057.1920.1057@0.23.1440.801" timestamp="1592184463713" />
+    <state width="1398" height="404" key="GridCell.Tab.1.right/0.23.1440.801@0.23.1440.801" timestamp="1592133536615" />
+    <state x="258" y="72" key="Maven.ArtifactSearchDialog" timestamp="1592057708785">
+      <screen x="0" y="23" width="1440" height="801" />
+    </state>
+    <state x="258" y="72" key="Maven.ArtifactSearchDialog/0.23.1440.801@0.23.1440.801" timestamp="1592057708785" />
+    <state x="263" y="67" key="Registry" timestamp="1592124920463">
+      <screen x="0" y="23" width="1440" height="801" />
+    </state>
+    <state x="263" y="67" key="Registry/0.23.1440.801@0.23.1440.801" timestamp="1592124920463" />
+    <state x="35" y="55" key="SettingsEditor" timestamp="1592235801349">
+      <screen x="0" y="23" width="1440" height="801" />
+    </state>
+    <state x="35" y="55" key="SettingsEditor/0.23.1440.801@0.23.1440.801" timestamp="1592235801349" />
+    <state x="399" y="243" key="com.intellij.ide.util.TipDialog" timestamp="1592314177002">
+      <screen x="0" y="23" width="1440" height="801" />
+    </state>
+    <state x="399" y="243" key="com.intellij.ide.util.TipDialog/0.23.1440.801@0.23.1440.801" timestamp="1592314177002" />
+    <state x="386" y="167" width="667" height="486" key="find.popup" timestamp="1592095003629">
+      <screen x="0" y="23" width="1440" height="801" />
+    </state>
+    <state x="386" y="167" width="667" height="486" key="find.popup/0.23.1440.801@0.23.1440.801" timestamp="1592095003629" />
+    <state x="385" y="61" width="670" height="676" key="search.everywhere.popup" timestamp="1592229780165">
+      <screen x="0" y="23" width="1440" height="801" />
+    </state>
+    <state x="385" y="61" width="670" height="676" key="search.everywhere.popup/0.23.1440.801@0.23.1440.801" timestamp="1592229780165" />
+  </component>
+</project>

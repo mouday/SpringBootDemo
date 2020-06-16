@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>登录</title>
+
+    <link rel="stylesheet" href="static/css/element-ui.css" />
+
+    <script src="static/js/axios.min.js"></script>
+    <script src="static/js/vue.js"></script>
+    <script src="static/js/element-ui.js"></script>
+    <script src="static/js/request.js"></script>
+
+    <style>
+      #app {
+        width: 500px;
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app">
+      <h2 style="text-align: center;">登录</h2>
+
+      <el-form
+        style="width: 500px;"
+        label-width="80px"
+        size="mini"
+        v-model="userInfo"
+      >
+        <el-form-item label="电话号码" required>
+          <el-input
+            v-model="userInfo.telphone"
+            placeholder="电话号码"
+          ></el-input>
+        </el-form-item>
+
+        <el-form-item label="密码" required>
+          <el-input v-model="userInfo.password" placeholder="密码"></el-input>
+        </el-form-item>
+
+        <el-form-item>
+          <el-button @click="submit">提交</el-button>
+        </el-form-item>
+      </el-form>
+    </div>
+
+    <script>
+      new Vue({
+        el: "#app",
+        data() {
+          return {
+            userInfo: {
+              telphone: "",
+              password: "",
+            },
+          };
+        },
+
+        methods: {
+          async submit() {
+            const res = await instance.post("/user/login", this.userInfo);
+
+            if (res.status == "success") {
+              this.$message.success("登录成功");
+              window.location.href = "/userinfo.html?id=" + res.data.id;
+            }
+          },
+        },
+      });
+    </script>
+  </body>
+</html>

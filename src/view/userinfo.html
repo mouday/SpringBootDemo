@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>用户信息</title>
+
+    <link rel="stylesheet" href="static/css/element-ui.css" />
+
+    <script src="static/js/axios.min.js"></script>
+    <script src="static/js/vue.js"></script>
+    <script src="static/js/vue-router.js"></script>
+    <script src="static/js/element-ui.js"></script>
+    <script src="static/js/request.js"></script>
+
+    <style>
+      #app {
+        width: 500px;
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <h2 style="text-align: center;">用户信息</h2>
+
+      <el-form
+        style="width: 500px;"
+        label-width="80px"
+        size="mini"
+        v-model="userInfo"
+      >
+        <el-form-item label="编号" required>
+          {{userInfo.id}}
+        </el-form-item>
+
+        <el-form-item label="姓名" required>
+          {{userInfo.name}}
+        </el-form-item>
+
+        <el-form-item label="年龄" required>
+          {{userInfo.age}}
+        </el-form-item>
+
+        <el-form-item label="性别" required>
+          {{userInfo.gender}}
+        </el-form-item>
+
+        <el-form-item label="电话" required>
+          {{userInfo.telphone}}
+        </el-form-item>
+      </el-form>
+    </div>
+
+    <script>
+      // 用来解析路由
+      const router = new VueRouter({
+        mode: "history", // 默认使用hash模式，url会出现#
+      });
+
+      const app = new Vue({
+        router,
+        el: "#app",
+        data() {
+          return {
+            userInfo: {
+              id: "",
+              name: "",
+              age: "",
+              gender: 0,
+              telphone: "",
+            },
+          };
+        },
+
+        methods: {
+          async getData() {
+            const res = await instance.get("/user/get", {
+              params: { id: this.userInfo.id },
+            });
+
+            this.userInfo = res.data;
+          },
+        },
+        created() {
+          this.userInfo.id = this.$route.query.id;
+          if (this.userInfo.id) {
+            this.getData();
+          }
+        },
+      });
+    </script>
+  </body>
+</html>

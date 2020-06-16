@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>注册</title>
+
+    <link rel="stylesheet" href="static/css/element-ui.css" />
+
+    <script src="static/js/axios.min.js"></script>
+    <script src="static/js/vue.js"></script>
+    <script src="static/js/element-ui.js"></script>
+    <script src="static/js/request.js"></script>
+
+    <style>
+      #app {
+        width: 500px;
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <h2 style="text-align: center;">账号注册</h2>
+
+      <el-form
+        style="width: 500px;"
+        label-width="80px"
+        size="mini"
+        v-model="userInfo"
+      >
+        <el-form-item label="姓名" required>
+          <el-input v-model="userInfo.name" placeholder="姓名"></el-input>
+        </el-form-item>
+
+        <el-form-item label="年龄" required>
+          <el-input v-model="userInfo.age" placeholder="年龄"></el-input>
+        </el-form-item>
+
+        <el-form-item label="性别" required>
+          <el-radio-group v-model="userInfo.gender">
+            <el-radio :label="0">男</el-radio>
+            <el-radio :label="1">女</el-radio>
+          </el-radio-group>
+        </el-form-item>
+
+        <el-form-item label="电话号码" required>
+          <el-input
+            v-model="userInfo.telphone"
+            placeholder="电话号码"
+          ></el-input>
+        </el-form-item>
+
+        <el-form-item label="验证码" required>
+          <el-input v-model="userInfo.otpCode" placeholder="验证码"
+            ><el-button slot="append" @click="getOtpCode"
+              >发送验证码</el-button
+            ></el-input
+          >
+        </el-form-item>
+
+        <el-form-item label="密码" required>
+          <el-input v-model="userInfo.password" placeholder="密码"></el-input>
+        </el-form-item>
+
+        <el-form-item>
+          <el-button @click="submit">提交</el-button>
+        </el-form-item>
+      </el-form>
+    </div>
+
+    <script>
+      new Vue({
+        el: "#app",
+        data() {
+          return {
+            userInfo: {
+              name: "",
+              age: "",
+              gender: 0,
+              telphone: "",
+              password: "",
+              otpCode: "",
+            },
+          };
+        },
+
+        methods: {
+          async getOtpCode() {
+            if (this.userInfo.telphone == "") {
+              this.$message.warning("手机号不能为空");
+              return;
+            }
+
+            const res = await instance.post("/user/getotp", {
+              telphone: this.userInfo.telphone,
+            });
+
+            if (res.status == "success") {
+              this.$message.success("验证码发送成功");
+            }
+          },
+
+          async submit() {
+            this.userInfo.age = parseInt(this.userInfo.age);
+
+            const res = await instance.post("/user/register", this.userInfo);
+
+            if (res.status == "success") {
+              this.$message.success("注册成功");
+            }
+          },
+        },
+      });
+    </script>
+  </body>
+</html>
