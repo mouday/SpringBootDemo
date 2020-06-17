@@ -7,7 +7,9 @@ public interface ItemStockDaoMapper {
 
     int insertSelective(ItemStockDao record);
 
-    ItemStockDao selectByPrimaryKey(Integer id);
+    ItemStockDao selectByPrimaryKey(Integer itemId);
+
+    ItemStockDao selectByItemId(Integer id);
 
     int updateByPrimaryKeySelective(ItemStockDao record);
 

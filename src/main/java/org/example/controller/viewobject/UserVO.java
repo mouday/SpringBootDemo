@@ -3,12 +3,16 @@ package org.example.controller.viewobject;
 public class UserVO {
     private Integer id;
 
+    // 用户名
     private String name;
 
+    // 用户性别
     private Byte gender;
 
+    // 用户年龄
     private Integer age;
 
+    // 用户电话
     private String telphone;
 
     public Integer getId() {

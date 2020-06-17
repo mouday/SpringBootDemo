@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>商品</title>
+
+    <link rel="stylesheet" href="static/css/element-ui.css" />
+
+    <script src="static/js/axios.min.js"></script>
+    <script src="static/js/vue.js"></script>
+    <script src="static/js/element-ui.js"></script>
+    <script src="static/js/request.js"></script>
+
+    <style>
+      #app {
+        width: 500px;
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <h2 style="text-align: center;">商品</h2>
+
+      <el-form
+        style="width: 500px;"
+        label-width="80px"
+        size="mini"
+        v-model="dataForm"
+      >
+        <el-form-item label="名称" required>
+          <el-input v-model="dataForm.title" placeholder="名称"></el-input>
+        </el-form-item>
+
+        <el-form-item label="价格" required>
+          <el-input v-model="dataForm.price" placeholder="价格"></el-input>
+        </el-form-item>
+
+        <el-form-item label="库存" required>
+          <el-input v-model="dataForm.stock" placeholder="库存"></el-input>
+        </el-form-item>
+
+        <el-form-item label="描述" required>
+          <el-input
+            v-model="dataForm.description"
+            placeholder="描述"
+          ></el-input>
+        </el-form-item>
+
+        <el-form-item label="图片" required>
+          <el-input v-model="dataForm.imgUrl" placeholder="图片"></el-input>
+        </el-form-item>
+
+        <el-form-item>
+          <el-button @click="onSubmit">添加</el-button>
+        </el-form-item>
+      </el-form>
+    </div>
+
+    <script>
+      new Vue({
+        el: "#app",
+        data() {
+          return {
+            dataForm: {
+              title: "",
+              price: "",
+              stock: 0,
+              description: "",
+              imgUrl: "",
+            },
+          };
+        },
+
+        methods: {
+          async onSubmit() {
+            const res = await instance.post("/item/create", this.dataForm);
+
+            if (res.status == "success") {
+              this.$message.success("添加成功");
+            }
+          },
+        },
+      });
+    </script>
+  </body>
+</html>

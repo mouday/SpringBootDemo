@@ -60,56 +60,51 @@
         </javaClientGenerator>
 
         <!--生成对应表及类名-->
-        <!--<table schema="mybatis" tableName="user_info" domainObjectName="UserDO"
-                enableInsert="true" enableSelectByExample="false"
-                enableDeleteByPrimaryKey="false" enableDeleteByExample="false"
-                enableCountByExample="false" enableUpdateByExample="false"
-                enableSelectByPrimaryKey="true" enableUpdateByPrimaryKey="true"/>-->
 
         <!--避免example复杂映射的sql查询-->
-        <table tableName="user_info"
-               domainObjectName="UserDao"
-               enableCountByExample="false"
-               enableUpdateByExample="false"
-               enableDeleteByExample="false"
-               enableSelectByExample="false"
-               selectByExampleQueryId="false"
-               enableInsert="true"
-               enableDeleteByPrimaryKey="false"
-                />
+        <!--<table tableName="user_info"-->
+        <!--       domainObjectName="UserDao"-->
+        <!--       enableCountByExample="false"-->
+        <!--       enableUpdateByExample="false"-->
+        <!--       enableDeleteByExample="false"-->
+        <!--       enableSelectByExample="false"-->
+        <!--       selectByExampleQueryId="false"-->
+        <!--       enableInsert="true"-->
+        <!--       enableDeleteByPrimaryKey="false"-->
+        <!--        />-->
 
-        <table tableName="user_password"
-               domainObjectName="UserPasswordDao"
-               enableCountByExample="false"
-               enableUpdateByExample="false"
-               enableDeleteByExample="false"
-               enableSelectByExample="false"
-               selectByExampleQueryId="false"
-               enableInsert="true"
-               enableDeleteByPrimaryKey="false"
-                />
+        <!--<table tableName="user_password"-->
+        <!--       domainObjectName="UserPasswordDao"-->
+        <!--       enableCountByExample="false"-->
+        <!--       enableUpdateByExample="false"-->
+        <!--       enableDeleteByExample="false"-->
+        <!--       enableSelectByExample="false"-->
+        <!--       selectByExampleQueryId="false"-->
+        <!--       enableInsert="true"-->
+        <!--       enableDeleteByPrimaryKey="false"-->
+        <!--        />-->
 
-        <table tableName="item"
-               domainObjectName="ItemDao"
-               enableCountByExample="false"
-               enableUpdateByExample="false"
-               enableDeleteByExample="false"
-               enableSelectByExample="false"
-               selectByExampleQueryId="false"
-               enableInsert="true"
-               enableDeleteByPrimaryKey="false"
-        />
+        <!--<table tableName="item"-->
+        <!--       domainObjectName="ItemDao"-->
+        <!--       enableCountByExample="false"-->
+        <!--       enableUpdateByExample="false"-->
+        <!--       enableDeleteByExample="false"-->
+        <!--       enableSelectByExample="false"-->
+        <!--       selectByExampleQueryId="false"-->
+        <!--       enableInsert="true"-->
+        <!--       enableDeleteByPrimaryKey="false"-->
+        <!--/>-->
 
-        <table tableName="item_stock"
-               domainObjectName="ItemStockDao"
-               enableCountByExample="false"
-               enableUpdateByExample="false"
-               enableDeleteByExample="false"
-               enableSelectByExample="false"
-               selectByExampleQueryId="false"
-               enableInsert="true"
-               enableDeleteByPrimaryKey="false"
-        />
+        <!--<table tableName="item_stock"-->
+        <!--       domainObjectName="ItemStockDao"-->
+        <!--       enableCountByExample="false"-->
+        <!--       enableUpdateByExample="false"-->
+        <!--       enableDeleteByExample="false"-->
+        <!--       enableSelectByExample="false"-->
+        <!--       selectByExampleQueryId="false"-->
+        <!--       enableInsert="true"-->
+        <!--       enableDeleteByPrimaryKey="false"-->
+        <!--/>-->
 
     </context>
 
