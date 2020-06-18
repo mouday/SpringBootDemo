@@ -16,6 +16,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 public class ItemServiceImpl implements ItemService {
@@ -45,6 +46,7 @@ public class ItemServiceImpl implements ItemService {
         itemDaoMapper.insertSelective(itemDao);
         itemModel.setId(itemDao.getId());
 
+        // 写入库存
         ItemStockDao itemStockDao = this.convertItemStockDaoFromItemModel(itemModel);
         itemStockDaoMapper.insertSelective(itemStockDao);
 
@@ -54,12 +56,19 @@ public class ItemServiceImpl implements ItemService {
 
     @Override
     public List<ItemModel> listItem() {
-        return null;
+        List<ItemDao> list = itemDaoMapper.selectList();
+        List<ItemModel> itemModels = list.stream().map(itemDao -> {
+           ItemStockDao itemStockDao = itemStockDaoMapper.selectByItemId(itemDao.getId());
+            ItemModel itemModel = this.convertModelFromDataObject(itemDao, itemStockDao);
+            return itemModel;
+        }).collect(Collectors.toList());
+        return itemModels;
     }
 
     @Override
     public ItemModel getItemById(Integer id) {
         ItemDao itemDao = itemDaoMapper.selectByPrimaryKey(id);
+
         if (itemDao == null) {
             return null;
         }
@@ -69,6 +78,7 @@ public class ItemServiceImpl implements ItemService {
 
         // 将dataobject -> model
         ItemModel itemModel = this.convertModelFromDataObject(itemDao, itemStockDao);
+
         return itemModel;
     }
 

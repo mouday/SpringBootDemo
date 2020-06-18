@@ -13,5 +13,5 @@ public interface UserPasswordDaoMapper {
 
     int updateByPrimaryKey(UserPasswordDao record);
 
-    UserPasswordDao selectByUserId(Integer user_id);
+    UserPasswordDao selectByUserId(Integer userId);
 }

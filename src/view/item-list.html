@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>商品列表</title>
+
+    <link rel="stylesheet" href="static/css/element-ui.css" />
+
+    <script src="static/js/axios.min.js"></script>
+    <script src="static/js/vue.js"></script>
+    <script src="static/js/element-ui.js"></script>
+    <script src="static/js/request.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <h2 style="text-align: center;">商品列表</h2>
+
+      <el-table :data="list" style="width: 100%;" border>
+        <el-table-column prop="id" label="ID" width="180"> </el-table-column>
+        <el-table-column prop="title" label="商品名称" width="180">
+        </el-table-column>
+        <el-table-column prop="description" label="商品描述"> </el-table-column>
+        <el-table-column prop="description" label="商品图片">
+          <template slot-scope="{row}">
+            <el-image
+              :src="row.imgUrl"
+              style="width: 60px; height: 30px;"
+              fit="contain"
+            ></el-image>
+          </template>
+        </el-table-column>
+        <el-table-column prop="price" label="商品价格"> </el-table-column>
+        <el-table-column prop="sales" label="商品销量"> </el-table-column>
+        <el-table-column prop="stock" label="商品库存"> </el-table-column>
+        <el-table-column label="商品详情">
+          <template slot-scope="{row}">
+            <a :href="`item-detail.html?id=${row.id}`">查看</a>
+          </template>
+        </el-table-column>
+      </el-table>
+    </div>
+
+    <script>
+      new Vue({
+        el: "#app",
+
+        data() {
+          return {
+            list: [],
+          };
+        },
+
+        methods: {
+          async getData() {
+            const res = await instance.get("/item/list");
+
+            if (res.status == "success") {
+              this.list = res.data;
+            }
+          },
+        },
+        created() {
+          this.getData();
+        },
+      });
+    </script>
+  </body>
+</html>

@@ -18,6 +18,14 @@
     from item
     where id = #{id,jdbcType=INTEGER}
   </select>
+
+  <select id="selectList" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from item
+    order by sales
+  </select>
+
   <insert id="insert" parameterType="org.example.dataobject.ItemDao">
     insert into item (id, title, price, 
       description, sales, img_url

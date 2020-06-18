@@ -1,0 +1,98 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>商品秒杀项目</title>
+
+    <link rel="stylesheet" href="static/css/element-ui.css" />
+    <link rel="stylesheet" href="static/css/main.css" />
+
+    <script src="static/js/axios.min.js"></script>
+    <script src="static/js/vue.js"></script>
+    <script src="static/js/element-ui.js"></script>
+    <script src="static/js/js.cookie.min.js"></script>
+  </head>
+
+  <body>
+    <div id="app">
+      <el-container>
+        <el-header>商品秒杀项目</el-header>
+
+        <el-container>
+          <el-aside width="200px">
+            <el-menu :default-active="activeIndex">
+              <template v-for="(item,index) in list">
+                <el-menu-item
+                  :index="`${index}`"
+                  @click="handleItemClick(index)"
+                >
+                  <i class="el-icon-menu"></i>
+                  <span slot="title">{{item.title}}</span>
+                </el-menu-item>
+              </template>
+            </el-menu>
+          </el-aside>
+
+          <el-main>
+            <iframe class="iframe" :src="iframeSrc"></iframe>
+          </el-main>
+        </el-container>
+      </el-container>
+    </div>
+
+    <script>
+      new Vue({
+        el: "#app",
+        data() {
+          return {
+            list: [
+              {
+                title: "用户注册",
+                src: "register.html",
+              },
+              {
+                title: "用户登录",
+                src: "login.html",
+              },
+              {
+                title: "用户信息",
+                src: "userinfo.html",
+              },
+              {
+                title: "添加商品",
+                src: "item.html",
+              },
+              {
+                title: "商品列表",
+                src: "item-list.html",
+              },
+              //   {
+              //     title: "商品详情",
+              //     src: "item-detail.html",
+              //   },
+            ],
+
+            activeIndex: "0",
+            iframeSrc: "",
+          };
+        },
+        methods: {
+          handleItemClick(index) {
+            this.iframeSrc = this.list[index].src;
+            Cookies.set("activeIndex", index);
+          },
+        },
+
+        created() {
+          let activeIndex = Cookies.get("activeIndex");
+
+          if (activeIndex) {
+            this.activeIndex = activeIndex;
+          }
+
+          this.handleItemClick(this.activeIndex);
+        },
+      });
+    </script>
+  </body>
+</html>

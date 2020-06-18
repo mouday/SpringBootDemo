@@ -29,7 +29,7 @@
     values (#{id,jdbcType=INTEGER}, #{stock,jdbcType=INTEGER}, #{itemId,jdbcType=INTEGER}
       )
   </insert>
-  <insert id="insertSelective" parameterType="org.example.dataobject.ItemStockDao" useGeneratedKeys="true" keyProperty="id">
+  <insert id="insertSelective" keyProperty="id" parameterType="org.example.dataobject.ItemStockDao" useGeneratedKeys="true">
     insert into item_stock
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="id != null">

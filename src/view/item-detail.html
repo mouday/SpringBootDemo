@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>商品详情</title>
+
+    <link rel="stylesheet" href="static/css/element-ui.css" />
+
+    <style>
+      #app {
+        width: 500px;
+        margin: 0 auto;
+      }
+    </style>
+
+    <script src="static/js/axios.min.js"></script>
+    <script src="static/js/vue.js"></script>
+    <script src="static/js/vue-router.js"></script>
+    <script src="static/js/element-ui.js"></script>
+    <script src="static/js/request.js"></script>
+  </head>
+
+  <body>
+    <div id="app">
+      <h2 style="text-align: center;">商品详情</h2>
+      <el-form>
+        <el-form-item label="ID">
+          {{detail.id}}
+        </el-form-item>
+        <el-form-item label="商品名称">
+          {{detail.title}}
+        </el-form-item>
+        <el-form-item label="商品描述">
+          {{detail.description}}
+        </el-form-item>
+        <el-form-item label="商品图片">
+          <el-image
+            :src="detail.imgUrl"
+            style="width: 60px; height: 30px;"
+            fit="conver"
+          >
+          </el-image>
+        </el-form-item>
+
+        <el-form-item label="商品价格">
+          {{detail.price}}
+        </el-form-item>
+
+        <el-form-item label="商品销量">
+          {{detail.sales}}
+        </el-form-item>
+
+        <el-form-item label="商品库存">
+          {{detail.stock}}
+        </el-form-item>
+      </el-form>
+    </div>
+
+    <script>
+      const router = new VueRouter({
+        mode: "history", // 默认使用hash模式，url会出现#
+      });
+
+      new Vue({
+        router,
+        el: "#app",
+
+        data() {
+          return {
+            detail: {},
+          };
+        },
+
+        methods: {
+          async getData() {
+            const res = await instance.get("/item/get", {
+              params: { id: this.detail.id },
+            });
+
+            if (res.status == "success") {
+              this.detail = res.data;
+            }
+          },
+        },
+
+        created() {
+          this.detail.id = this.$route.query.id;
+
+          if (this.detail.id) {
+            this.getData();
+          }
+        },
+      });
+    </script>
+  </body>
+</html>

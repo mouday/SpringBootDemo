@@ -2,22 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="db565531-651a-422c-a2ef-f09ac0f1a8cb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/controller/ItemController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/controller/viewobject/ItemVO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/service/ItemService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/service/impl/ItemServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sql/item_stock.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sql/user_info.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sql/user_password.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controller/viewobject/UserVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/controller/viewobject/UserVO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dao/ItemStockDaoMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dao/ItemStockDaoMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/service/model/ItemModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/service/model/ItemModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controller/ItemController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/controller/ItemController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dao/ItemDaoMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dao/ItemDaoMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dao/UserPasswordDaoMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dao/UserPasswordDaoMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/service/impl/ItemServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/service/impl/ItemServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapping/ItemDaoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapping/ItemDaoMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/mapping/ItemStockDaoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapping/ItemStockDaoMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/mapping/UserDaoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapping/UserDaoMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/mapping/UserPasswordDaoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapping/UserPasswordDaoMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis-generator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis-generator.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -169,9 +162,9 @@
       <item itemvalue="Application.App" />
       <item itemvalue="Application.MD5Test" />
       <item itemvalue="Application.MapTest" />
+      <item itemvalue="Application.ValidatorTest" />
       <item itemvalue="Maven.mybatis-generator" />
       <item itemvalue="Maven.spring-boot:run" />
-      <item itemvalue="Application.ValidatorTest" />
     </list>
     <recent_temporary>
       <list>
@@ -220,26 +213,26 @@
       <screen x="0" y="23" width="1440" height="801" />
     </state>
     <state x="458" y="164" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1440.801@0.23.1440.801" timestamp="1592115530596" />
-    <state width="1398" height="130" key="GridCell.Tab.0.bottom" timestamp="1592357386201">
+    <state width="1398" height="103" key="GridCell.Tab.0.bottom" timestamp="1592400238631">
       <screen x="0" y="23" width="1440" height="801" />
     </state>
     <state width="1398" height="130" key="GridCell.Tab.0.bottom/0.23.1440.801/-251.-1057.1920.1057@0.23.1440.801" timestamp="1592357386201" />
-    <state width="1398" height="181" key="GridCell.Tab.0.bottom/0.23.1440.801@0.23.1440.801" timestamp="1592317184496" />
-    <state width="1398" height="130" key="GridCell.Tab.0.center" timestamp="1592357386201">
+    <state width="1398" height="103" key="GridCell.Tab.0.bottom/0.23.1440.801@0.23.1440.801" timestamp="1592400238631" />
+    <state width="1398" height="103" key="GridCell.Tab.0.center" timestamp="1592400238630">
       <screen x="0" y="23" width="1440" height="801" />
     </state>
     <state width="1398" height="130" key="GridCell.Tab.0.center/0.23.1440.801/-251.-1057.1920.1057@0.23.1440.801" timestamp="1592357386201" />
-    <state width="1398" height="181" key="GridCell.Tab.0.center/0.23.1440.801@0.23.1440.801" timestamp="1592317184495" />
-    <state width="1398" height="130" key="GridCell.Tab.0.left" timestamp="1592357386200">
+    <state width="1398" height="103" key="GridCell.Tab.0.center/0.23.1440.801@0.23.1440.801" timestamp="1592400238630" />
+    <state width="1398" height="103" key="GridCell.Tab.0.left" timestamp="1592400238630">
       <screen x="0" y="23" width="1440" height="801" />
     </state>
     <state width="1398" height="130" key="GridCell.Tab.0.left/0.23.1440.801/-251.-1057.1920.1057@0.23.1440.801" timestamp="1592357386200" />
-    <state width="1398" height="181" key="GridCell.Tab.0.left/0.23.1440.801@0.23.1440.801" timestamp="1592317184495" />
-    <state width="1398" height="130" key="GridCell.Tab.0.right" timestamp="1592357386201">
+    <state width="1398" height="103" key="GridCell.Tab.0.left/0.23.1440.801@0.23.1440.801" timestamp="1592400238630" />
+    <state width="1398" height="103" key="GridCell.Tab.0.right" timestamp="1592400238631">
       <screen x="0" y="23" width="1440" height="801" />
     </state>
     <state width="1398" height="130" key="GridCell.Tab.0.right/0.23.1440.801/-251.-1057.1920.1057@0.23.1440.801" timestamp="1592357386201" />
-    <state width="1398" height="181" key="GridCell.Tab.0.right/0.23.1440.801@0.23.1440.801" timestamp="1592317184496" />
+    <state width="1398" height="103" key="GridCell.Tab.0.right/0.23.1440.801@0.23.1440.801" timestamp="1592400238631" />
     <state width="1398" height="404" key="GridCell.Tab.1.bottom" timestamp="1592184463713">
       <screen x="0" y="23" width="1440" height="801" />
     </state>
@@ -272,10 +265,10 @@
       <screen x="0" y="23" width="1440" height="801" />
     </state>
     <state x="35" y="55" key="SettingsEditor/0.23.1440.801@0.23.1440.801" timestamp="1592235801349" />
-    <state x="399" y="243" key="com.intellij.ide.util.TipDialog" timestamp="1592314177002">
+    <state x="399" y="243" key="com.intellij.ide.util.TipDialog" timestamp="1592399628763">
       <screen x="0" y="23" width="1440" height="801" />
     </state>
-    <state x="399" y="243" key="com.intellij.ide.util.TipDialog/0.23.1440.801@0.23.1440.801" timestamp="1592314177002" />
+    <state x="399" y="243" key="com.intellij.ide.util.TipDialog/0.23.1440.801@0.23.1440.801" timestamp="1592399628763" />
     <state x="386" y="167" width="667" height="486" key="find.popup" timestamp="1592095003629">
       <screen x="0" y="23" width="1440" height="801" />
     </state>
