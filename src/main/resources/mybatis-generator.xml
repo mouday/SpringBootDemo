@@ -106,6 +106,28 @@
         <!--       enableDeleteByPrimaryKey="false"-->
         <!--/>-->
 
+        <!--<table tableName="order_info"-->
+        <!--       domainObjectName="OrderInfoDao"-->
+        <!--       enableCountByExample="false"-->
+        <!--       enableUpdateByExample="false"-->
+        <!--       enableDeleteByExample="false"-->
+        <!--       enableSelectByExample="false"-->
+        <!--       selectByExampleQueryId="false"-->
+        <!--       enableInsert="true"-->
+        <!--       enableDeleteByPrimaryKey="false"-->
+        <!--/>-->
+
+        <table tableName="sequence_info"
+               domainObjectName="SequenceInfoDao"
+               enableCountByExample="false"
+               enableUpdateByExample="false"
+               enableDeleteByExample="false"
+               enableSelectByExample="false"
+               selectByExampleQueryId="false"
+               enableInsert="true"
+               enableDeleteByPrimaryKey="false"
+        />
+
     </context>
 
 </generatorConfiguration>

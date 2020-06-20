@@ -55,7 +55,7 @@ public class UserController extends BaseController {
 
         // 将登录成功后的信息加入到session中
         this.httpServletRequest.getSession().setAttribute("IS_LOGIN", true);
-        this.httpServletRequest.getSession().setAttribute("LOGIN_USER", userModel.getName());
+        this.httpServletRequest.getSession().setAttribute("LOGIN_USER", userModel);
 
         Map<String, Object> data = new HashMap<>();
         data.put("id", userModel.getId());

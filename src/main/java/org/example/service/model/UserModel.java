@@ -118,8 +118,8 @@ public class UserModel {
         this.encryptPassword = encryptPassword;
     }
 
-    public String getEncryptPassword() throws NoSuchAlgorithmException {
-        return EncodeByMd5(this.password);
+    public String getEncryptPassword()  {
+        return this.encryptPassword;
     }
 
     public static String EncodeByMd5(String str) throws NoSuchAlgorithmException {

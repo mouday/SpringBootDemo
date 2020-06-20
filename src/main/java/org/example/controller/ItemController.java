@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.stream.Collectors;
 
-@Controller("/item")
+@Controller("item")
 @RequestMapping("/item")
 @CrossOrigin(allowCredentials="true", origins = {"*"})
 public class ItemController extends BaseController{

@@ -1,4 +1,9 @@
-package org.example.service.impl;
+package org.example.service;
 
-public class OrderService {
+import org.example.error.BusinessException;
+import org.example.service.model.OrderModel;
+
+public interface OrderService {
+    OrderModel createOrder(Integer userId, Integer ItemId, Integer amount) throws BusinessException;
+
 }

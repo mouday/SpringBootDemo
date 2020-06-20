@@ -58,7 +58,7 @@ public class ItemServiceImpl implements ItemService {
     public List<ItemModel> listItem() {
         List<ItemDao> list = itemDaoMapper.selectList();
         List<ItemModel> itemModels = list.stream().map(itemDao -> {
-           ItemStockDao itemStockDao = itemStockDaoMapper.selectByItemId(itemDao.getId());
+            ItemStockDao itemStockDao = itemStockDaoMapper.selectByItemId(itemDao.getId());
             ItemModel itemModel = this.convertModelFromDataObject(itemDao, itemStockDao);
             return itemModel;
         }).collect(Collectors.toList());
@@ -94,7 +94,21 @@ public class ItemServiceImpl implements ItemService {
         return itemDao;
     }
 
-    public ItemStockDao convertItemStockDaoFromItemModel(ItemModel itemModel) {
+    @Override
+    @Transactional
+    public boolean decreaseStock(Integer itemId, Integer amount) {
+        int affectedRow = itemStockDaoMapper.decreaseStock(itemId, amount);
+
+        if (affectedRow > 0) {
+            // 更新库存成功
+            return true;
+        } else {
+            // 更新库存失败
+            return false;
+        }
+    }
+
+    private ItemStockDao convertItemStockDaoFromItemModel(ItemModel itemModel) {
         if (itemModel == null) {
             return null;
         }
@@ -106,7 +120,7 @@ public class ItemServiceImpl implements ItemService {
         return itemStockDao;
     }
 
-    public ItemModel convertModelFromDataObject(ItemDao itemDao, ItemStockDao itemStockDao){
+    private ItemModel convertModelFromDataObject(ItemDao itemDao, ItemStockDao itemStockDao) {
         ItemModel itemModel = new ItemModel();
         BeanUtils.copyProperties(itemDao, itemModel);
         itemModel.setStock(itemStockDao.getStock());

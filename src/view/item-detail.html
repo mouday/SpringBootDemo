@@ -53,6 +53,10 @@
         <el-form-item label="商品库存">
           {{detail.stock}}
         </el-form-item>
+
+        <el-form-item>
+          <el-button @click.native.prevent="handleOrderClick">下单</el-button>
+        </el-form-item>
       </el-form>
     </div>
 
@@ -79,6 +83,19 @@
 
             if (res.status == "success") {
               this.detail = res.data;
+            }
+          },
+
+          async handleOrderClick() {
+            const res = await instance.get("/order/create", {
+              params: {
+                itemId: this.detail.id,
+                amount: 1,
+              },
+            });
+
+            if (res.status == "success") {
+              this.$message.success("下单成功");
             }
           },
         },

@@ -1,5 +1,6 @@
 package org.example.dao;
 
+import org.apache.ibatis.annotations.Param;
 import org.example.dataobject.ItemStockDao;
 
 public interface ItemStockDaoMapper {
@@ -14,4 +15,6 @@ public interface ItemStockDaoMapper {
     int updateByPrimaryKeySelective(ItemStockDao record);
 
     int updateByPrimaryKey(ItemStockDao record);
+
+    int decreaseStock(@Param("itemId") Integer itemId, @Param("amount") Integer amount);
 }

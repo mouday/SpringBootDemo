@@ -1,25 +1,18 @@
-package org.example.service.model;
+package org.example.dataobject;
 
 import java.math.BigDecimal;
 
-// 交易模型
-public class OrderModel {
-    // 交易id 16位流水号
+public class OrderInfoDao {
     private String id;
 
-    // 用户id
     private Integer userId;
 
-    // 商品id
     private Integer itemId;
 
-    // 购买商品时的单价
     private BigDecimal itemPrice;
 
-    // 购买数量
     private Integer amount;
 
-    // 购买金额
     private BigDecimal orderAmount;
 
     public String getId() {
@@ -27,7 +20,7 @@ public class OrderModel {
     }
 
     public void setId(String id) {
-        this.id = id;
+        this.id = id == null ? null : id.trim();
     }
 
     public Integer getUserId() {
