@@ -1,8 +1,8 @@
-package org.example.service.impl;
+package org.example.service;
 
 import org.example.service.model.PromoModel;
 
-public class PromoService {
+public interface PromoService {
 
-    PromoModel selectByItemId(Integer itemId);
+    PromoModel getPromoByItemId(Integer itemId);
 }

@@ -117,8 +117,19 @@
         <!--       enableDeleteByPrimaryKey="false"-->
         <!--/>-->
 
-        <table tableName="sequence_info"
-               domainObjectName="SequenceInfoDao"
+        <!--<table tableName="sequence_info"-->
+        <!--       domainObjectName="SequenceInfoDao"-->
+        <!--       enableCountByExample="false"-->
+        <!--       enableUpdateByExample="false"-->
+        <!--       enableDeleteByExample="false"-->
+        <!--       enableSelectByExample="false"-->
+        <!--       selectByExampleQueryId="false"-->
+        <!--       enableInsert="true"-->
+        <!--       enableDeleteByPrimaryKey="false"-->
+        <!--/>-->
+
+        <table tableName="promo_info"
+               domainObjectName="PromoInfoDao"
                enableCountByExample="false"
                enableUpdateByExample="false"
                enableDeleteByExample="false"

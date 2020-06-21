@@ -83,6 +83,7 @@ public class UserServiceImpl implements UserService {
     public UserModel validateLogin(String telphone, String encryptPassword) throws BusinessException, NoSuchAlgorithmException {
         // 通过手机获取用户信息
         UserDao userDao = userDaoMapper.selectByTelphone(telphone);
+
         if(userDao == null){
             throw new BusinessException(EmBusinessError.USER_LOGIN_FAIL);
         }

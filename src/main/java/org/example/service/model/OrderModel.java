@@ -2,7 +2,9 @@ package org.example.service.model;
 
 import java.math.BigDecimal;
 
-// 交易模型
+/**
+ * 交易模型
+ */
 public class OrderModel {
     // 交易id 16位流水号
     private String id;
@@ -12,6 +14,9 @@ public class OrderModel {
 
     // 商品id
     private Integer itemId;
+
+    // 秒杀单价， 若非空则以秒杀价格下单
+    private Integer promoId;
 
     // 购买商品时的单价
     private BigDecimal itemPrice;
@@ -68,5 +73,13 @@ public class OrderModel {
 
     public void setOrderAmount(BigDecimal orderAmount) {
         this.orderAmount = orderAmount;
+    }
+
+    public Integer getPromoId() {
+        return promoId;
+    }
+
+    public void setPromoId(Integer promoId) {
+        this.promoId = promoId;
     }
 }

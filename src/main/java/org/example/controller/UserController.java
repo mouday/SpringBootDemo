@@ -1,24 +1,18 @@
 package org.example.controller;
 
 import com.alibaba.druid.util.StringUtils;
-
-import org.apache.tomcat.util.security.MD5Encoder;
 import org.example.controller.viewobject.UserVO;
 import org.example.error.BusinessException;
 import org.example.error.EmBusinessError;
 import org.example.response.CommonReturnType;
 import org.example.service.UserService;
 import org.example.service.model.UserModel;
-import org.example.validator.ValidatorImpl;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
-import sun.misc.BASE64Encoder;
 
 import javax.servlet.http.HttpServletRequest;
-import java.nio.charset.StandardCharsets;
-import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.HashMap;
 import java.util.Map;
@@ -34,8 +28,6 @@ public class UserController extends BaseController {
 
     @Autowired
     private HttpServletRequest httpServletRequest;
-
-
 
     // 登录
     @RequestMapping(value = "/login", method = {RequestMethod.POST})
@@ -66,16 +58,6 @@ public class UserController extends BaseController {
     @RequestMapping(value = "/register", method = {RequestMethod.POST})
     @ResponseBody
     public CommonReturnType register(@RequestBody UserModel userModel) throws BusinessException, NoSuchAlgorithmException {
-        //
-        // UserModel userModel = new UserModel();
-        // userModel.setName(params.get("name").toString());
-        // userModel.setAge(Integer.parseInt(params.get("age").toString()));
-        // userModel.setGender(Byte.parseByte(params.get("gender").toString()));
-        // userModel.setTelphone(params.get("telphone").toString());
-        // userModel.setRegisterMode("byphone");
-
-
-        // System.out.println(MD5Encoder.encode(params.get("password").toString().getBytes()));
 
         // 验证手机号验证码对应
         String otpCode = userModel.getOtpCode();
@@ -128,7 +110,7 @@ public class UserController extends BaseController {
     }
 
     // 将领域模型转换为供UI使用的viewobject
-    public UserVO convertFromModel(UserModel userModel) {
+    private UserVO convertFromModel(UserModel userModel) {
         if (userModel == null) {
             return null;
         }

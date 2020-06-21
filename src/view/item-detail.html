@@ -11,6 +11,10 @@
         width: 500px;
         margin: 0 auto;
       }
+
+      .promo-price {
+        color: red;
+      }
     </style>
 
     <script src="static/js/axios.min.js"></script>
@@ -54,8 +58,36 @@
           {{detail.stock}}
         </el-form-item>
 
+        <template v-if="detail.promoStatus != 0">
+          <template v-if="detail.promoStatus == 1">
+            <el-form-item label="秒杀开始时间">
+              {{detail.startTime}}
+            </el-form-item>
+            <el-form-item label="秒杀价格">
+              <span class="promo-price">{{detail.promoPrice}}</span>
+            </el-form-item>
+          </template>
+
+          <template v-if="detail.promoStatus == 2">
+            <el-form-item label="秒杀结束时间">
+              {{detail.endTime}}
+            </el-form-item>
+            <el-form-item label="秒杀价格">
+              <span class="promo-price">{{detail.promoPrice}}</span>
+            </el-form-item>
+          </template>
+
+          <template v-else-if="detail.promoStatus == 3">
+            <el-form-item label="秒杀活动">
+              已结束
+            </el-form-item>
+          </template>
+        </template>
+
         <el-form-item>
-          <el-button @click.native.prevent="handleOrderClick">下单</el-button>
+          <el-button @click.native.prevent="handleOrderClick"
+            >{{buyButtonText}}</el-button
+          >
         </el-form-item>
       </el-form>
     </div>
@@ -75,6 +107,16 @@
           };
         },
 
+        computed: {
+          buyButtonText() {
+            if (this.detail.promoStatus == 2) {
+              return "秒杀下单";
+            } else {
+              return "立即下单";
+            }
+          },
+        },
+
         methods: {
           async getData() {
             const res = await instance.get("/item/get", {
@@ -91,11 +133,15 @@
               params: {
                 itemId: this.detail.id,
                 amount: 1,
+                promoId: this.detail.promoId,
               },
             });
 
             if (res.status == "success") {
               this.$message.success("下单成功");
+              setTimeout(() => {
+                window.location.href = "/order-detail.html?id=" + res.data.id;
+              }, 1500);
             }
           },
         },

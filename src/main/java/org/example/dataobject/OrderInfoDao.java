@@ -9,6 +9,8 @@ public class OrderInfoDao {
 
     private Integer itemId;
 
+    private Integer promoId;
+
     private BigDecimal itemPrice;
 
     private Integer amount;
@@ -61,5 +63,13 @@ public class OrderInfoDao {
 
     public void setOrderAmount(BigDecimal orderAmount) {
         this.orderAmount = orderAmount;
+    }
+
+    public Integer getPromoId() {
+        return promoId;
+    }
+
+    public void setPromoId(Integer promoId) {
+        this.promoId = promoId;
     }
 }

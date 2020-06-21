@@ -7,7 +7,9 @@ import org.example.dataobject.ItemStockDao;
 import org.example.error.BusinessException;
 import org.example.error.EmBusinessError;
 import org.example.service.ItemService;
+import org.example.service.PromoService;
 import org.example.service.model.ItemModel;
+import org.example.service.model.PromoModel;
 import org.example.validator.ValidationResult;
 import org.example.validator.ValidatorImpl;
 import org.springframework.beans.BeanUtils;
@@ -28,6 +30,9 @@ public class ItemServiceImpl implements ItemService {
 
     @Autowired
     private ItemStockDaoMapper itemStockDaoMapper;
+
+    @Autowired
+    private PromoService promoService;
 
     @Override
     @Transactional
@@ -79,6 +84,12 @@ public class ItemServiceImpl implements ItemService {
         // 将dataobject -> model
         ItemModel itemModel = this.convertModelFromDataObject(itemDao, itemStockDao);
 
+        // 获取秒杀活动信息
+        PromoModel promoModel = promoService.getPromoByItemId(itemModel.getId());
+        if(promoModel != null && promoModel.getStatus().intValue() != 3){
+            itemModel.setPromoModel(promoModel);
+        }
+
         return itemModel;
     }
 
@@ -106,6 +117,12 @@ public class ItemServiceImpl implements ItemService {
             // 更新库存失败
             return false;
         }
+    }
+
+    @Override
+    @Transactional
+    public void increaseSales(Integer itemId, Integer amount) {
+        itemDaoMapper.increaseSales(itemId, amount);
     }
 
     private ItemStockDao convertItemStockDaoFromItemModel(ItemModel itemModel) {

@@ -98,6 +98,7 @@
     </set>
     where id = #{id,jdbcType=INTEGER}
   </update>
+
   <update id="updateByPrimaryKey" parameterType="org.example.dataobject.ItemDao">
     update item
     set title = #{title,jdbcType=VARCHAR},
@@ -105,6 +106,12 @@
       description = #{description,jdbcType=VARCHAR},
       sales = #{sales,jdbcType=INTEGER},
       img_url = #{imgUrl,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+
+  <update id="increaseSales">
+    update item
+    set sales = sales + #{amount}
     where id = #{id,jdbcType=INTEGER}
   </update>
 </mapper>
